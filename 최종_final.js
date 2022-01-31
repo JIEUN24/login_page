@@ -1,5 +1,5 @@
 function changePhone1(){
-    const phone1 = document.getElementById("phone1").value
+    let phone1 = document.getElementById("phone1").value
     
     if(phone1.length === 3){
         document.getElementById("phone2").focus()
@@ -7,28 +7,24 @@ function changePhone1(){
 }
 
 function changePhone2(){
-    const phone2 = document.getElementById("phone2").value
+    let phone2 = document.getElementById("phone2").value
     
     if(phone2.length === 4){
         document.getElementById("phone3").focus()
     }
 }
 
+// 이걸 모르겠다 !!
+
 function changePhone3(){
-    const phone3 = document.getElementById("phone3").value
+    let phone3 = document.getElementById("phone3").value
     
     if(phone3.length === 4){
+        const btn1 = document.getElementById("btn1").value 
         document.getElementById("btn1").setAttribute("style", "background-color: yellow")
         document.getElementById("btn1").disabled = false;
-    } else {
-        // 버튼을 비활성화한다
-        document.getElementById("btn1").setAttribute("style", "background-color: none")
-        document.getElementById("btn1").disabled = true;
     }
 }
-
-
-
 
 let isStarted = false;
             // 여기에 명령문 작성!
@@ -56,7 +52,11 @@ let isStarted = false;
                         }
                     }, 1000)
                 } else {
-                    alert('너 이미 실행했어')
+                    alert('인증번호가 이미 발송되었습니다.')
                 }    
             }
+
+function signup() {
+    alert('회원가입이 완료되었습니다.')
+}
 

@@ -7,12 +7,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <h3>코드캠프 회원가입</h3>
+        <h3>회원가입 페이지</h3>
         <input class="inputbox" type="email" placeholder="이메일을 입력해 주세요.">
         <input class="inputbox" type="text" placeholder="이름을 입력해 주세요.">
         <input class="inputbox" type="password" placeholder="비밀번호를 입력해 주세요.">
         <input class="inputbox" id="confirm" type="password" placeholder="비밀번를 다시 입력해주세요.">
-        <div>
+        <div class="phoneNum">
             <input id="phone1" type="text" size="3" maxlength = "3" oninput="changePhone1()"> -
             <input id="phone2" type="text" size="4" maxlength = "4" oninput="changePhone2()"> -
             <input id="phone3" type="text" size="4" maxlength = "4" oninput="changePhone3()">
@@ -20,22 +20,30 @@
 
         <div class="wrapper__body">
             <div id="num">000000</div>
-            <button class="btn1" disabled = true; oninput="changePhone3()" onclick="getToken()">인증번호 전송</button>
+            <button class="btn1" oninput="changePhone3()" onclick="getToken()">인증번호 전송</button>
         </div>
         <div class="wrapper__body">
             <div id="count">03:00</div>
             <button id="btn2" disabled = true;>인증완료</button>
+        </div>
+        <div class="wrapper__footer">
+            <select>
+                <option disabled selected>지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
+                <option>강원도</option>
+                <option>경기도</option>
+                <option>충청도</option>
+                <option>경상도</option>
+                <option>광역시</option>
+                <option>제주도</option>
+            </select>
+            <input type="radio" name="gender">여성
+            <input type="radio" name="gender">남성
         </div>   
-        <select>
-            <option disabled selected>지역을 선택하세요.</option>
-            <option>서울</option>
-            <option>경기</option>
-            <option>인천</option>
-        </select>
-        <input type="radio" name="gender">여성
-        <input type="radio" name="gender">남성
         <hr>
-        <button>가입하기</button>
+        <button onclick="signup()">가입하기</button>
     </div>
 </body>
 </html>
