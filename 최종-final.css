@@ -1,0 +1,38 @@
+
+/* 최종 css */
+
+h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper {
+    width: 320px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.inputbox {
+    display: block;
+    width: 300px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.wrapper__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.btn1 {
+
+}
